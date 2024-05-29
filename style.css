@@ -1,0 +1,182 @@
+@font-face {
+    font-family: 'Flareserif821BT';
+    src: url('font/Flareserif 821 Bold.otf') format('opentype');
+    font-weight: 1000;
+    font-style: normal;
+}
+
+body {
+    background-color: black; /* Fall back color */
+    background-image: url('images/background2.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: white;
+    font-family: 'Flareserif821BT', Arial, sans-serif;
+    margin: 20px;
+    padding: 0px;
+    /* overflow: hidden; */
+    position: relative;
+    transition: background-position 0.1s, background-size 0.1s;
+    animation: backgroundFadeIn 300ms 1s backwards;
+}
+
+@keyframes backgroundFadeIn {
+    0% { 
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+/* Button related stuff */
+.hidden {
+    display: none;
+}
+
+.buttonStyleNormal {
+    padding: 10px 50px;
+    font-weight: bold;
+    /* display: inline; */
+    margin: 0px 328px;
+}
+
+.buttonStyleVoidStorm {
+    padding: 10px 50px;
+    font-weight: bold;
+    /* display: inline; */
+    /* margin: 0px 600px; */
+}
+
+.buttonCenter {
+    display: inline;
+    /* flex-direction: column;
+    align-items: center;
+    justify-content: center; */
+    
+}
+
+/* Heading styles for each type of fissure */
+#steelpath-title {
+    color: rgb(255, 255, 255);
+    margin-left: 600px;
+}
+
+#normal-title {
+    color: rgb(255, 255, 255);
+    margin-left: 650px;
+}
+
+#voidstorm-title {
+    color: rgb(255, 255, 255);
+    margin-left: 650px;
+}
+
+#credits-title {
+    margin-left: 93%;
+    font-size:small
+}
+
+/* Rainbow keyframes for Omnia fissures */
+@keyframes rainbow {
+    0% { color: red; }
+    10% { color: orange; }
+    20% { color: yellow; }
+    30% { color: green; }
+    40% { color: blue; }
+    50% { color: indigo; }
+    60% { color: violet; }
+    70% { color: red; }
+    80% { color: orange; }
+    90% { color: yellow; }
+    100% { color: green; }
+}
+
+.rainbow-text {
+    animation: rainbow 4s linear infinite;
+}
+
+/* Loading spinner styles */
+.loading-spinner {
+    border: 8px solid #f3f3f3; /* Light grey */
+    border-top: 8px solid #444; /* Darker grey */
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    animation: spin 1s linear infinite;
+    margin: 20px auto;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Box styles for each type of fissure */
+#normal-fissures div, #steelpath-fissures div, #voidstorm-fissures div {
+    font-family: 'Flareserif821BT', Arial, sans-serif;
+    padding: 50px 20px;
+    margin: 5px 300px; /* Center the div and add margin */
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    max-width: 900px; /* Set a maximum width */
+    width: 100%; /* Make sure it uses full width up to the max-width */
+    position: relative;
+    transition: transform 0.1s, background-size 0.1s;
+}
+
+/* Colors for different eras */
+.tier-lith {
+    background-color: #663004d2;
+}
+
+.tier-meso {
+    background-color: #240e08d0;
+}
+
+.tier-neo {
+    background-color: #46433ad7;
+}
+
+.tier-axi {
+    background-color: #441b00d3;
+}
+
+.tier-requiem {
+    background-color: #680000d0;
+}
+
+.tier-omnia {
+    background-color: rgba(74, 255, 246, 0.562);
+}
+
+/* Enemy faction colors */
+.red-text {
+    color: rgb(255, 0, 0);
+}
+
+.blue-text {
+    color: rgb(121, 228, 255);
+}
+
+.green-text {
+    color: rgb(0, 255, 34);
+}
+
+.yellow-text {
+    color:#ffd000
+}
+
+/* Timer styles */
+#refresh-timer {
+    margin-top: 20px;
+    font-size: 15px;
+    color: white;
+}
+
+#timer {
+    font-weight:lighter;
+
+}

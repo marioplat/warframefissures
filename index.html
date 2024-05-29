@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Warframe Active Fissures</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- <script src="script.js" defer></script> -->
+</head>
+<body>
+    <div id="refresh-timer"> <!-- Refresh Timer Element -->
+        Refreshing in: <span id="timer"></span>
+        <h1 id="credits-title"> Created by mar</h1>
+    </div>
+    <div class="loading-spinner hidden" id="loading-spinner"></div> <!-- Loading spinner element -->
+    <div id="steelpath-fissures">
+        <h2 id="steelpath-title">
+            <img src="images/SteelEssence.webp" width="25" height="25" alt="Steel Path Icon" class="icon" loading="lazy">
+            Steel Path Fissures
+            <img src="images/SteelEssence.webp" width="25" height="25" alt="Steel Path Icon" class="icon" loading="lazy">
+        </h2>
+    </div>
+    <!-- <div id="varziaList">
+        <h2 id="varziaTitle"> Varzia </h2>
+    </div> -->
+    <div class="buttonCenter">
+        <button id="toggle-normal-fissures" class="buttonStyleNormal">Show Normal Fissures</button> 
+        <button id="toggle-voidstorm-fissures" class="buttonStyleVoidStorm">Show Void Storm Fissures</button>
+    </div>
+    <div id="normal-fissures" class="hidden">
+        <h2 id="normal-title">Normal Fissures</h2>
+    </div>
+    <div id="voidstorm-fissures" class="hidden">
+        <h2 id="voidstorm-title">Void Storm Fissures</h2>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
+
+
