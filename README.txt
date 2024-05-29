@@ -1,1 +1,1 @@
-this is for testing purposes, dont mind me!
+This is a website built on Javascript, HTML, and CSS that utilizes the Warframe API to display active fissures. This is pretty much my first solo project, so any feedback is very welcome. Thanks for looking.
