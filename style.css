@@ -117,7 +117,7 @@ body {
 /* Box styles for each type of fissure */
 #normal-fissures div, #steelpath-fissures div, #voidstorm-fissures div {
     font-family: 'Flareserif821BT', Arial, sans-serif;
-    padding: 50px 20px;
+    padding: 1px 20px;
     margin: 5px 300px; /* Center the div and add margin */
     border-radius: 5px;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
