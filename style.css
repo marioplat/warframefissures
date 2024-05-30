@@ -16,11 +16,10 @@ body {
     font-family: 'Flareserif821BT', Arial, sans-serif;
     margin: 20px;
     padding: 0px;
-    /* overflow: hidden; */
     position: relative;
     transition: background-position 0.1s, background-size 0.1s;
     animation: backgroundFadeIn 300ms 1s backwards;
-    min-height: 100vh
+    /* min-height: 100vh */
 }
 
 @keyframes backgroundFadeIn {
@@ -186,6 +185,7 @@ body {
     body {
         margin: 10px;
         font-size: 0.9em;
+        background-size: cover;
     }
 
     .buttonStyle {
