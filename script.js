@@ -9,15 +9,15 @@ document.addEventListener("DOMContentLoaded", function () {
     // toggleNormalButton.classList.add('buttonStyle');
     // toggleVoidStormButton.classList.add('buttonStyle');
 
-    document.addEventListener('mousemove', function(e) {
-        const amountMovedX = (e.clientX / window.innerWidth) * 2 - 1; // Range from -1 to 1
-        const amountMovedY = (e.clientY / window.innerHeight) * 2 - 1; // Range from -1 to 1
-        const zoomFactor = 1.05; // Adjust zoom factor as needed
-        const backgroundSize = 100 * zoomFactor + '%'; // Increase background size for zoom effect
+    // document.addEventListener('mousemove', function(e) {
+    //     const amountMovedX = (e.clientX / window.innerWidth) * 2 - 1; // Range from -1 to 1
+    //     const amountMovedY = (e.clientY / window.innerHeight) * 2 - 1; // Range from -1 to 1
+    //     const zoomFactor = 1.05; // Adjust zoom factor as needed
+    //     const backgroundSize = 100 * zoomFactor + '%'; // Increase background size for zoom effect
 
-        document.body.style.backgroundPosition = `${50 - amountMovedX * 10}% ${50 - amountMovedY * 10}%`;
-        document.body.style.backgroundSize = backgroundSize;
-    });
+    //     document.body.style.backgroundPosition = `${50 - amountMovedX * 10}% ${50 - amountMovedY * 10}%`;
+    //     document.body.style.backgroundSize = backgroundSize;
+    // });
 
     //Loading icon
     const loadingSpinner = document.getElementById('loading-spinner');
