@@ -20,6 +20,7 @@ body {
     position: relative;
     transition: background-position 0.1s, background-size 0.1s;
     animation: backgroundFadeIn 300ms 1s backwards;
+    min-height: 100vh
 }
 
 @keyframes backgroundFadeIn {
@@ -53,26 +54,26 @@ body {
 /* Dude idk */
 .buttonCenter {
     display: inline;
-    /* flex-direction: column;
+    flex-direction: column;
     align-items: center;
-    justify-content: center; */
+    justify-content: center;
     
 }
 
 /* Heading styles for each type of fissure */
 #steelpath-title {
     color: rgb(255, 255, 255);
-    margin-left: 600px;
+    text-align: center;
 }
 
 #normal-title {
     color: rgb(255, 255, 255);
-    margin-left: 650px;
+    text-align: center;
 }
 
 #voidstorm-title {
     color: rgb(255, 255, 255);
-    margin-left: 650px;
+    text-align: center;
 }
 
 #credits-title {
@@ -119,7 +120,7 @@ body {
 #normal-fissures div, #steelpath-fissures div, #voidstorm-fissures div {
     font-family: 'Flareserif821BT', Arial, sans-serif;
     padding: 1px 20px;
-    margin: 5px 300px;
+    margin: 5px auto;
     border-radius: 5px;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
     max-width: 900px;
@@ -190,6 +191,7 @@ body {
     .buttonStyle {
         padding: 8px 15px;
         margin: 5px;
+        width: calc(100% - 20px);
     }
 
     #credits-title {
@@ -200,5 +202,10 @@ body {
     #normal-fissures div, #steelpath-fissures div, #voidstorm-fissures div {
         margin: 10px 20px;
         width: calc(100% - 40px);
+    }
+
+    #refresh-timer {
+        text-align: center;
+        font-size: 12px;
     }
 }
