@@ -40,22 +40,20 @@ body {
     padding: 10px 50px;
     font-weight: bold;
     /* display: inline; */
-    margin: 0px 328px;
 }
 
 .buttonStyleVoidStorm {
     padding: 10px 50px;
     font-weight: bold;
-    /* display: inline; */
-    /* margin: 0px 600px; */
 }
 
 /* Dude idk */
 .buttonCenter {
-    display: inline;
+    display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    margin-top: 20px;
     
 }
 
