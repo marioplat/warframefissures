@@ -50,6 +50,7 @@ body {
     /* margin: 0px 600px; */
 }
 
+/* Dude idk */
 .buttonCenter {
     display: inline;
     /* flex-direction: column;
@@ -79,7 +80,7 @@ body {
     font-size:small
 }
 
-/* Rainbow keyframes for Omnia fissures */
+/* Rainbow keyframes for Omnia fissures and some other text */
 @keyframes rainbow {
     0% { color: red; }
     10% { color: orange; }
@@ -100,8 +101,8 @@ body {
 
 /* Loading spinner styles */
 .loading-spinner {
-    border: 8px solid #f3f3f3; /* Light grey */
-    border-top: 8px solid #444; /* Darker grey */
+    border: 8px solid #f3f3f3;
+    border-top: 8px solid #444;
     border-radius: 50%;
     width: 40px;
     height: 40px;
@@ -118,11 +119,11 @@ body {
 #normal-fissures div, #steelpath-fissures div, #voidstorm-fissures div {
     font-family: 'Flareserif821BT', Arial, sans-serif;
     padding: 1px 20px;
-    margin: 5px 300px; /* Center the div and add margin */
+    margin: 5px 300px;
     border-radius: 5px;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
-    max-width: 900px; /* Set a maximum width */
-    width: 100%; /* Make sure it uses full width up to the max-width */
+    max-width: 900px;
+    width: 100%;
     position: relative;
     transition: transform 0.1s, background-size 0.1s;
 }
@@ -178,5 +179,26 @@ body {
 
 #timer {
     font-weight:lighter;
+}
 
+@media (max-width: 768px) {
+    body {
+        margin: 10px;
+        font-size: 0.9em;
+    }
+
+    .buttonStyle {
+        padding: 8px 15px;
+        margin: 5px;
+    }
+
+    #credits-title {
+        text-align: center;
+        margin: 10px 0;
+    }
+
+    #normal-fissures div, #steelpath-fissures div, #voidstorm-fissures div {
+        margin: 10px 20px;
+        width: calc(100% - 40px);
+    }
 }
