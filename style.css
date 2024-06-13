@@ -6,98 +6,46 @@
 }
 
 body {
-    background-color: black; /* Fall back color */
+    background-color: black; /* Fallback color */
+    color: white;
+    font-family: 'Flareserif821BT', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    opacity: 0;
+    animation: backgroundFadeIn 1s ease-in-out forwards;
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
     background-image: url('images/background2.jpg');
     background-size: cover;
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
-    color: white;
-    font-family: 'Flareserif821BT', Arial, sans-serif;
-    margin: 20px;
-    padding: 0px;
-    position: relative;
-    transition: background-position 0.1s, background-size 0.1s;
-    animation: backgroundFadeIn 300ms 1s backwards;
-    /* min-height: 100vh */
+    opacity: 0;
+    animation: backgroundFadeIn 2s ease-in-out forwards;
+    z-index: -1;
 }
 
 @keyframes backgroundFadeIn {
-    0% { 
-        opacity: 0;
-    }
-    100% {
+    to { 
         opacity: 1;
     }
 }
 
-/* Button related stuff */
-.hidden {
-    display: none;
+@keyframes backgroundFadeOut {
+    to { 
+        opacity: 0;
+    }
 }
 
-.buttonStyleNormal {
-    padding: 10px 50px;
-    font-weight: bold;
-    /* display: inline; */
-}
-
-.buttonStyleVoidStorm {
-    padding: 10px 50px;
-    font-weight: bold;
-}
-
-/* Dude idk */
-.buttonCenter {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    margin-top: 20px;
-    
-}
-
-/* Heading styles for each type of fissure */
-#steelpath-title {
-    color: rgb(255, 255, 255);
-    text-align: center;
-}
-
-#normal-title {
-    color: rgb(255, 255, 255);
-    text-align: center;
-}
-
-#voidstorm-title {
-    color: rgb(255, 255, 255);
-    text-align: center;
-}
-
-#credits-title {
-    margin-left: 93%;
-    font-size:small
-}
-
-/* Rainbow keyframes for Omnia fissures and some other text */
-@keyframes rainbow {
-    0% { color: red; }
-    10% { color: orange; }
-    20% { color: yellow; }
-    30% { color: green; }
-    40% { color: blue; }
-    50% { color: indigo; }
-    60% { color: violet; }
-    70% { color: red; }
-    80% { color: orange; }
-    90% { color: yellow; }
-    100% { color: green; }
-}
-
-.rainbow-text {
-    animation: rainbow 4s linear infinite;
-}
-
-/* Loading spinner styles */
+/* Loading spinner */
 .loading-spinner {
     border: 8px solid #f3f3f3;
     border-top: 8px solid #444;
@@ -113,97 +61,219 @@ body {
     100% { transform: rotate(360deg); }
 }
 
-/* Box styles for each type of fissure */
-#normal-fissures div, #steelpath-fissures div, #voidstorm-fissures div {
+/* Header stuff */
+
+header {
+    background-color: rgb(0, 32, 68);
+    padding-top: 90px;
+    box-shadow: 5px 5px 10px black;
+}
+
+#website-title {
+    text-shadow: 5px 5px 10px black;
+    position: absolute;
+    top: 3px;
+    left: 778px;
+}
+
+#refresh-timer {
+    font-size: 20px;
+    color: white;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    opacity: 0;
+    animation: backgroundFadeIn 1s ease-in-out forwards;
+    animation-delay: 1s;
+    text-shadow: 5px 5px 10px black;
+}
+
+#refresh-timer.visible {
+    opacity: 0; /* Visible state */
+}
+
+#timer {
+    font-weight: lighter;
+    text-shadow: 5px 5px 10px black;
+}
+
+#credits-title {
+    font-size: 20px;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    text-shadow: 5px 5px 10px black;
+}
+
+/* Legend */
+#legend-menu {
+    height: 500px;
+    width: 350px;
+    border-radius: 5%;
+    border-style:groove;
+    border-color: white;
+    margin-top: 150px;
+    margin-left: 60px;
+    background-image: url('images/background2.jpg');
+    position: fixed;
+    text-align: center;
+    opacity: 0;
+    animation: backgroundFadeIn 1s ease-in-out forwards;
+    animation-delay: 1.5s;
+}
+
+#legendTitle {
+    color: #ffffff;
+    text-decoration: underline;
+    text-shadow: 5px 5px 10px black;
+}
+
+/* Tier List */
+#tierTitle {
+    text-decoration: underline;
+}
+
+#tierListLith,
+#tierListMeso,
+#tierListNeo,
+#tierListAxi,
+#tierListRequiem,
+#tierListOmnia {
+    margin: 10px;
+    display: inline;
+    text-shadow: 5px 5px 10px black;
+}
+
+/* Faction List */
+#factionTitle {
+    text-decoration: underline;
+    text-shadow: 5px 5px 10px black;
+}
+
+#factionGrineer,
+#factionCorpus,
+#factionInfested,
+#factionOrokin,
+#factionMurmur {
+    display: inline;
+    text-shadow: 5px 5px 10px black;
+}
+
+/* Button styles */
+.hidden {
+    display: none;
+}
+
+/* .buttonStyleLegend {
+    padding: 10px 20px;
+    margin-top: 100px;
+    position: fixed;
+} */
+
+.buttonStyleNormal,
+.buttonStyleVoidStorm {
+    padding: 10px 50px;
+    font-weight: bold;
+    opacity: 0;
+    animation: backgroundFadeIn 1s ease-in-out forwards;
+}
+
+.buttonCenter {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+/* Titles */
+#steelpath-title,
+#normal-title,
+#voidstorm-title {
+    color: #fff;
+    text-align: center;
+    opacity: 0;
+    animation: backgroundFadeIn 0.5s ease-in-out forwards;
+    text-shadow: 5px 5px 10px black;
+}
+
+/* Rainbow text animation */
+@keyframes rainbow {
+    0%, 70% { color: red; }
+    10%, 80% { color: orange; }
+    20%, 90% { color: yellow; }
+    30%, 100% { color: green; }
+    40% { color: blue; }
+    50% { color: indigo; }
+    60% { color: violet; }
+}
+
+.rainbow-text {
+    animation: rainbow 4s linear infinite;
+}
+
+/* Fissure boxes */
+#normal-fissures div,
+#steelpath-fissures div,
+#voidstorm-fissures div {
     font-family: 'Flareserif821BT', Arial, sans-serif;
     padding: 1px 20px;
     margin: 5px auto;
     border-radius: 5px;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.1);
     max-width: 900px;
     width: 100%;
     position: relative;
     transition: transform 0.1s, background-size 0.1s;
+    opacity: 0;
+    animation: backgroundFadeIn 0.5s ease-in-out forwards;
+    text-shadow: 5px 5px 20px black;
 }
 
-/* Colors for different eras */
-.tier-lith {
-    background-color: #663004d2;
-}
-
-.tier-meso {
-    background-color: #240e08d0;
-}
-
-.tier-neo {
-    background-color: #46433ad7;
-}
-
-.tier-axi {
-    background-color: #441b00d3;
-}
-
-.tier-requiem {
-    background-color: #680000d0;
-}
-
-.tier-omnia {
-    background-color: rgba(74, 255, 246, 0.562);
-}
+/* Era colors */
+.tier-lith { background-color: #663004d2; }
+.tier-meso { background-color: #240e08d0; }
+.tier-neo { background-color: #46433ad7; }
+.tier-axi { background-color: #441b00d3; }
+.tier-requiem { background-color: #680000d0; }
+.tier-omnia { background-color: rgba(74, 255, 246, 0.562); }
 
 /* Enemy faction colors */
-.red-text {
-    color: rgb(255, 0, 0);
-}
+.red-text { color: rgb(255, 0, 0); }
+.blue-text { color: rgb(121, 228, 255); }
+.green-text { color: rgb(0, 255, 34); }
+.yellow-text { color: #ffd000; }
 
-.blue-text {
-    color: rgb(121, 228, 255);
-}
-
-.green-text {
-    color: rgb(0, 255, 34);
-}
-
-.yellow-text {
-    color:#ffd000
-}
-
-/* Timer styles */
-#refresh-timer {
-    margin-top: 20px;
-    font-size: 15px;
-    color: white;
-}
-
-#timer {
-    font-weight:lighter;
-}
-
-@media (max-width: 768px) {
+/* Styles for lower res screens*/
+@media (max-width: 360px) { 
     body {
         margin: 10px;
         font-size: 0.9em;
         background-size: cover;
     }
 
+    #refresh-timer {
+        display: none;
+    }
+
+    #legend-menu {
+        display: none;
+    }
+
+    #credits-title {
+        display: none;
+    }
+
+    #normal-fissures div,
+    #steelpath-fissures div,
+    #voidstorm-fissures div {
+        margin: center;
+        width: calc(100% - 40px);
+    }
+
     .buttonStyle {
         padding: 8px 15px;
         margin: 5px;
         width: calc(100% - 20px);
-    }
-
-    #credits-title {
-        text-align: center;
-        margin: 10px 0;
-    }
-
-    #normal-fissures div, #steelpath-fissures div, #voidstorm-fissures div {
-        margin: 10px 20px;
-        width: calc(100% - 40px);
-    }
-
-    #refresh-timer {
-        text-align: center;
-        font-size: 12px;
     }
 }

@@ -5,14 +5,34 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Warframe Active Fissures</title>
     <link rel="stylesheet" href="style.css">
-    <!-- <script src="script.js" defer></script> -->
+    <script src="script.js" defer></script>
 </head>
 <body>
-    <div id="refresh-timer"> <!-- Refresh Timer Element -->
-        Refreshing in: <span id="timer"></span>
+    <header class="container">
+        <h1 id="website-title"> Warframe Active Fissures </h1>
         <h1 id="credits-title"> Created by mar</h1>
+        <h1 id="refresh-timer"> Refreshing in: <span id="timer"></span> </h1> <!-- Refresh Timer Element --> 
+    </header>
+    <div id="legend-menu"> <!-- class="hidden" -->
+        <h1 id="legendTitle"> Legend </h1>
+        <h1 id="tierTitle"> Era </h1>
+        <div class="tierList">
+            <h1 id="tierListLith"> Lith</h1>
+            <h1 id="tierListMeso"> Meso</h1>
+            <h1 id="tierListNeo"> Neo</h1>
+            <h1 id="tierListAxi"> Axi</h1>
+            <h1 id="tierListRequiem"> Requiem</h1>
+            <h1 id="tierListOmnia"> Omnia</h1>
+        </div>
+        <h1 id="factionTitle"> Factions </h1>
+        <div class="factionList">
+            <h1 id="factionGrineer"> Grineer</h1>
+            <h1 id="factionCorpus"> Corpus</h1>
+            <h1 id="factionInfested"> Infested</h1>
+            <h1 id="factionOrokin"> Orokin</h1>
+            <h1 id="factionMurmur"> Murmur</h1>
+        </div>
     </div>
-    <div class="loading-spinner hidden" id="loading-spinner"></div> <!-- Loading spinner element -->
     <div id="steelpath-fissures">
         <h2 id="steelpath-title">
             <img src="images/SteelEssence.webp" width="25" height="25" alt="Steel Path Icon" class="icon" loading="lazy">
@@ -20,9 +40,7 @@
             <img src="images/SteelEssence.webp" width="25" height="25" alt="Steel Path Icon" class="icon" loading="lazy">
         </h2>
     </div>
-    <!-- <div id="varziaList">
-        <h2 id="varziaTitle"> Varzia </h2>
-    </div> -->
+    <div class="loading-spinner hidden" id="loading-spinner"></div> <!-- Loading spinner element -->
     <div class="buttonCenter">
         <button id="toggle-normal-fissures" class="buttonStyleNormal">Show Normal Fissures</button> 
         <button id="toggle-voidstorm-fissures" class="buttonStyleVoidStorm">Show Void Storm Fissures</button>
@@ -33,7 +51,6 @@
     <div id="voidstorm-fissures" class="hidden">
         <h2 id="voidstorm-title">Void Storm Fissures</h2>
     </div>
-    <script src="script.js"></script>
 </body>
 </html>
 

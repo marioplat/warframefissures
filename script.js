@@ -3,8 +3,12 @@ document.addEventListener("DOMContentLoaded", function () {
     //Initializes the buttons and makes them dependent on their respective elements.
     const toggleNormalButton = document.getElementById('toggle-normal-fissures');
     const normalFissuresSection = document.getElementById('normal-fissures');
-    const toggleVoidStormButton = document.getElementById('toggle-voidstorm-fissures')
+
+    const toggleVoidStormButton = document.getElementById('toggle-voidstorm-fissures');
     const voidStormFissuresSection = document.getElementById('voidstorm-fissures');
+
+    // const toggleLegendButton = document.getElementById('toggle-legend-menu');
+    // const legendSection = document.getElementById('legend-menu');
 
     // toggleNormalButton.classList.add('buttonStyle');
     // toggleVoidStormButton.classList.add('buttonStyle');
@@ -26,6 +30,45 @@ document.addEventListener("DOMContentLoaded", function () {
     const creditsName = document.getElementById('credits-title');
     creditsName.classList.add('rainbow-text');
 
+    //Legend
+    const legendTierSectionLith = document.getElementById('tierListLith');
+    const legendTierSectionMeso = document.getElementById('tierListMeso');
+    const legendTierSectionNeo = document.getElementById('tierListNeo');
+    const legendTierSectionAxi = document.getElementById('tierListAxi');
+    const legendTierSectionRequiem = document.getElementById('tierListRequiem');
+    const legendTierSectionOmnia = document.getElementById('tierListOmnia');
+
+    legendTierSectionLith.classList.add('tier-lith');
+    legendTierSectionMeso.classList.add('tier-meso');
+    legendTierSectionNeo.classList.add('tier-neo');
+    legendTierSectionAxi.classList.add('tier-axi');
+    legendTierSectionRequiem.classList.add('tier-requiem');
+    legendTierSectionOmnia.classList.add('tier-omnia');
+    // legendTierSectionOmnia.classList.add('rainbow-text');
+
+    const legendFactionSectionGrineer = document.getElementById('factionGrineer');
+    const legendFactionSectionCorpus = document.getElementById('factionCorpus');
+    const legendFactionSectionInfested = document.getElementById('factionInfested');
+    const legendFactionSectionOrokin = document.getElementById('factionOrokin');
+    const legendFactionSectionMurmur = document.getElementById('factionMurmur');
+
+    legendFactionSectionGrineer.classList.add('red-text');
+    legendFactionSectionCorpus.classList.add('blue-text');
+    legendFactionSectionInfested.classList.add('green-text');
+    legendFactionSectionOrokin.classList.add('yellow-text');
+    // legendFactionSectionMurmur.classList.add('rainbow-text');
+
+    //Function for toggling the legend
+    // toggleLegendButton.addEventListener('click', function () {
+    //     if (legendSection.classList.contains('hidden')) {
+    //         legendSection.classList.remove('hidden');
+    //         toggleLegendButton.textContent = 'Hide Legend';
+    //     } else {
+    //         legendSection.classList.add('hidden');
+    //         legendButton.textContent = 'Show Legend';
+    //     }
+    // });
+
     //Function for toggling normal fissures
     toggleNormalButton.addEventListener('click', function () {
         if (normalFissuresSection.classList.contains('hidden')) {
@@ -46,7 +89,7 @@ document.addEventListener("DOMContentLoaded", function () {
             voidStormFissuresSection.classList.add('hidden');
             toggleVoidStormButton.textContent = 'Show Void Storm Fissures';
         }
-    });
+    }); 
 
     loadingSpinner.classList.remove('hidden'); // Remove icon when everything is loaded.
 
@@ -116,10 +159,6 @@ document.addEventListener("DOMContentLoaded", function () {
                 updateFissureTimeRemaining(fissureElement, fissure.expiry);
             });
 
-            // Display Varzia Inventory
-            const varziaListContainer = document.getElementById('varziaList');
-
-
             // Function to create fissure element
             function createFissureElement(fissure) {
                 const fissureElement = document.createElement('div');
@@ -145,11 +184,6 @@ document.addEventListener("DOMContentLoaded", function () {
                 if (fissure.missionType === 'Void_cascade') {
                     fissure.missionType = 'Void Cascade';
                 }
-
-                // Testing if I can get an element based on location
-                // if(fissure.isStorm && fissure.node.toLowerCase === 'pluto') {
-                //     fissure.missionType = 'debugging'
-                // }
 
                 fissureElement.innerHTML = `
                     <p class="enemy-${fissure.enemy.toLowerCase()}">
@@ -208,6 +242,15 @@ document.addEventListener("DOMContentLoaded", function () {
     }, refreshInterval);
 
 });
+
+
+
+
+
+
+
+
+
 
 
 
