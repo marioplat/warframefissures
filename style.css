@@ -112,7 +112,7 @@ header {
     border-radius: 5%;
     border-style:groove;
     border-color: white;
-    margin-top: 150px;
+    margin-top: 50px;
     margin-left: 60px;
     background-image: url('images/background2.jpg');
     position: fixed;
@@ -244,8 +244,8 @@ header {
 .green-text { color: rgb(0, 255, 34); }
 .yellow-text { color: #ffd000; }
 
-/* Styles for lower res screens*/
-@media (max-width: 360px) { 
+/* Styles for smaller screens */
+@media (max-width: 1800px) {
     body {
         margin: 10px;
         font-size: 0.9em;
@@ -260,7 +260,7 @@ header {
         display: none;
     }
 
-    #credits-title {
+    #website-title {
         display: none;
     }
 
